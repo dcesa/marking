@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>ESA阅卷</title>
-    <meta property="og:type" content="webpage">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>ESA阅卷</title>
+        <meta property="og:type" content="webpage">
         <meta property="og:url">
-            <meta property="og:title" content="ESA阅卷">
-                <meta name="apple-mobile-web-app-title" content="ESA阅卷">
-                    
-                    <meta name="apple-mobile-web-app-capable" content="yes">
-                        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
-                                <link rel="stylesheet" href="./index_resources/header_include.min.css">
-                                    <link rel="stylesheet" href="./index_resources/appView.css">
-                                        <link rel="stylesheet" href="./index_resources/viewColorful.css">
-                                            <style>
-                                                table.app_view_history td{
-                                                    white-space: nowrap;
-                                                    overflow: hidden;
-                                                    text-overflow: ellipsis;
-                                                    word-break: break-all;
-                                                    word-wrap: break-word;
-                                                    text-align: center;
-                                                }
-                                            </style>
-</head>
-
-<body style="">
+        <meta property="og:title" content="ESA阅卷"/>
+        <meta name="apple-mobile-web-app-title" content="ESA阅卷"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui"/>
+        <link rel="stylesheet" href="./index_resources/header_include.min.css"/>
+        <link rel="stylesheet" href="./index_resources/appView.css"/>
+        <link rel="stylesheet" href="./index_resources/viewColorful.css"/>
+        <style>
+            table.app_view_history td{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                word-wrap: break-word;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
     
-    <!-- wechat share icon -->
     <div style="display:none;" id="wechatShareImg">
         <img src="./index_resources/f120">
-            </div>
+    </div>
     
     <div class="row view-alert" style="/*position:fixed;top:0;*/display:none;z-index:99;width:100%;background:#343434;margin-left:0;margin-right:0;padding-top:30px;padding-bottom:30px;box-shadow:inset 0px -10px 16px rgba(22, 22, 23, 0.62);">
         <div class="col-md-12 text-left" style="padding-right:50px;padding-left:30px;">
@@ -37,17 +36,13 @@
         </div>
         <div class="col-md-12 pull-right">
             <img src="./index_resources/alert-arrow.png" class="pull-right" style="width:30px;margin-top:-68px;">
-                </div>
+        </div>
     </div>
-    
-    
     
     <div class="row-fluid  margin-bottom-20" style="z-index:-2;">
         <div id="header"></div>
     </div>
     
-    
-    <!--=== Content Part ===-->
     <div class="container content">
         <div class="view row">
             <div class="span12" id="appicon-bg">
@@ -63,18 +58,18 @@
             <div class="span12 gray-text margin-bottom-30" style="text-align:center;">
                 <ul class="breadcrumb " >
                     <li>版本：2.0.0.092401</li>
-                    <li >更新时间：2019-09-24</li>
+                    <li>更新时间：2019-09-24</li>
                 </ul>
             </div>
         </div>
         
-        <div id="" class="view row margin-bottom-30 col-md-6 col-md-offset-3" style="padding-top:36px;">
+        <div id="" class="view row margin-bottom-30 col-md-6 col-md-offset-3" style="padding-top:25px;">
             <div class="col-md-12">
                 <div class="span12 gray-text" style="text-align:center;">
                     <img src="./index_resources/qrcode_android.png" class="qrcode ">
                 </div>
             </div>
-            <div class="col-md-12" style="margin-top:20px;">
+            <div class="col-md-12" style="margin-top:30px;">
                 <div class="row mb-10 install-btn">
                     <div class="span12 margin-bottom-20" style="text-align:center;">
                         <div class="spinner">
@@ -93,7 +88,6 @@
             </div>
         </div>
         
-        <!-- Start install -->
         <div class="view row" style="margin-top:20px;">
             <div class="span12 margin-bottom-20" style="text-align:center;display:none;">
                 <div class="spinner">
@@ -102,9 +96,7 @@
                     <a href="itms-services://?action=download-manifest&url=https://dcesa.github.io/ios_marking/raw/master/manifest.plist" id="down_load" class="btn-u btn-u-lg btn-u-green"><i class="fa fa-download"></i> 点击安装</a>
                 </div>
             </div>
-            
         </div>
-        <!-- Dnd install -->
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -125,55 +117,42 @@
                 </div>
             </div>
         </div>
-        
-    </div><!--/container-->
-    <!--=== End Content Part ===-->
-    
-    
-    <div style="padding-left:15px;padding-right:15px;">
-        
-        
     </div>
-    
-    <!--=== Copyright ===-->
     <link rel="stylesheet" href="./index_resources/custom-sky-forms.css">
         <link href="./index_resources/fineuploader.css" rel="stylesheet" type="text/css">
             <div id="reportAppModal"></div>
             <div id="feedbackAppModal"></div>
             <div id="loginTelModalDiv"></div>
             
-            
-            <!--=== End Copyright ===-->
-            <!-- JS Global Compulsory -->
             <script src="./index_resources/push.js"></script><script async="" src="./index_resources/analytics.js"></script><script type="text/javascript">
                 var userKey = "08a1fbd288eab4b8e5151c42257e7ebc";
-                </script>
+            </script>
             <script type="text/javascript" src="./index_resources/app_view.min.js"></script>
             <script type="text/javascript" src="./index_resources/ua-parser.min.js"></script>
             <script>
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                 ga('create', 'UA-52814215-1', 'auto');
-                 ga('send', 'pageview');
-                 ga('set', 'userId', '08a1fbd288eab4b8e5151c42257e7ebc');
-                 ga('send', 'event', 'authentication', 'user-id-available');
-                 
-                 // push to baidu
-                 (function(){
-                  var bp = document.createElement('script');
-                  var curProtocol = window.location.protocol.split(':')[0];
-                  if (curProtocol === 'https') {
-                  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                  }
-                  else {
-                  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                  }
-                  var s = document.getElementsByTagName("script")[0];
-                  s.parentNode.insertBefore(bp, s);
-                  })();
-                </script>
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    ga('create', 'UA-52814215-1', 'auto');
+                    ga('send', 'pageview');
+                    ga('set', 'userId', '08a1fbd288eab4b8e5151c42257e7ebc');
+                    ga('send', 'event', 'authentication', 'user-id-available');
+                    
+                    // push to baidu
+                    (function(){
+                        var bp = document.createElement('script');
+                        var curProtocol = window.location.protocol.split(':')[0];
+                        if (curProtocol === 'https') {
+                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                        }
+                        else {
+                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                        }
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
             <script src="./index_resources/jquery.fine-uploader.min.js"></script>
             <script type="text/javascript" src="./index_resources/jweixin-1.0.0.js"></script>
             <!--[if lt IE 9]>
@@ -257,129 +236,52 @@
             }
             
             $(document).ready(function() {
-                              App.init();
-                              console.log($.ua.device);
-                              
-                              if (false) {
-                              if (isNeedCheckUC()) {
-                              $.ajax({
-                                     type : "POST",
-                                     url : "https://www.frontjs.com/home/isUC",
-                                     dataType: 'json',
-                                     async:false,
-                                     beforeSend: function( xhr ) {
-                                     },
-                                     success : function(result, textStatus, jqXHR) {
-                                     if (result.isUC) {
-                                     isUCRequest = false;
-                                     needInstallInOutBrowser = false;
-                                     remindOpenBrowserText = '';
-                                     reminderUCDownloadContent = '您当前使用的是 UC 浏览器，该浏览器不支持安装App。请在浏览器中打开，即可下载';
-                                     
-                                     var html = '<div class="row view-alert" style="display:none;z-index:99;width:100%;background:#343434;margin-left:0;margin-right:0;padding-top:30px;padding-bottom:30px;box-shadow:inset 0px -10px 16px rgba(22, 22, 23, 0.62);"><div class="col-md-12 text-left" style="padding-right:30px;padding-left:30px;"><p style="color:#7f7e7e;margin:0px;"></p></div></div>';
-                                     
-                                     $(html).insertAfter("#wechatShareImg");
-                                     
-                                     setTimeout(function () {
-                                                $('.view-alert').slideDown(1000);
-                                                }, 200);
-                                     }
-                                     },
-                                     error : function(jqXHR, textStatus, errorThrown) {
-                                     }
-                                     });
-                              }
-                              }
-                              
-                              $('#reportClick, #feedbackClick').click(function () {
-                                                                      var modal = $(this).attr('data-modal');
-                                                                      ajaxLoadModal(modal);
-                                                                      });
-                              
-                              $('#inhouseClick').click(function () {
-                                                       $("#inhouseTip").modal('show');
-                                                       });
-                              
-                              $('#form').submit(function() {
-                                                if ($('#password').val() == '') {
-                                                alert(appInstallPasswordAlert);
-                                                return false;
-                                                }
-                                                
-                                                saveData();
-                                                return false;
-                                                });
-                              
-                              initView();
-                              
-                              $('.history_show_more').click(function() {
-                                                            loadOtherApps();
-                                                            });
-                              
-                              if (isWeiXin()) {
-                              setTimeout(function () {
-                                         $('.view-alert').slideDown(1000);
-                                         }, 500);
-                              }
-                              $("#lastest-li .close-tips").on('click', function() {
-                                                              $("#lastest-li").removeClass('hide').addClass('hide');
-                                                              // 使fashion模板背景变小
-                                                              $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
-                                                              $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
-                                                              $("div.view-fashion-body").css('background-size', 'auto 170px');
-                                                              });
-                              });
-                              
-                              // wechat
-                              wx.config({
-                                        debug: false,
-                                        appId: 'wx5c466490aaef0cc3',
-                                        timestamp: 1540263708,
-                                        nonceStr: '3086a87bc1eb8b151e52faa06c48b9eb',
-                                        signature: '94fe574db54efba23eca7fa600bf987cbd026b5a',
-                                        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ']
-                                        });
-                                        
-                                        wx.ready(function(){
-                                                 wx.onMenuShareAppMessage({
-                                                                          title: "教学监测阅卷",
-                                                                          desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+1.1.10.1014+%28build+4%29+%E5%A4%A7%E5%B0%8F%3A+2.3+MB+%E5%AD%A6%E4%B8%9A%E8%B4%A8%E9%87%8F%E6%99%BA%E8%83%BD%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F%E8%AF%84%E5%8D%B7%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E6%9B%B4%E4%BE%BF%E6%8D%B7%EF%BC%8C%E6%9B%B4%E9%AB%98%E6%95%88%EF%BC%81'.replace(/\+/g, '%20')),
-                                                                          link: 'https://www.pgyer.com/android_markingapp',
-                                                                          imgUrl: 'https://appicon.pgyer.com/image/view/app_icons/fdd4edaf8779671ccce9058ebfd15313/120'
-                                                                          });
-                                                 wx.onMenuShareTimeline({
-                                                                        title: '教学监测阅卷',
-                                                                        link: 'https://www.pgyer.com/android_markingapp',
-                                                                        imgUrl: 'https://appicon.pgyer.com/image/view/app_icons/fdd4edaf8779671ccce9058ebfd15313/120'
-                                                                        });
-                                                 wx.onMenuShareQQ({
-                                                                  title: '教学监测阅卷',
-                                                                  desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+1.1.10.1014+%28build+4%29+%E5%A4%A7%E5%B0%8F%3A+2.3+MB+%E5%AD%A6%E4%B8%9A%E8%B4%A8%E9%87%8F%E6%99%BA%E8%83%BD%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F%E8%AF%84%E5%8D%B7%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E6%9B%B4%E4%BE%BF%E6%8D%B7%EF%BC%8C%E6%9B%B4%E9%AB%98%E6%95%88%EF%BC%81'.replace(/\+/g, '%20')),
-                                                                  link: 'https://www.pgyer.com/android_markingapp',
-                                                                  imgUrl: 'https://appicon.pgyer.com/image/view/app_icons/fdd4edaf8779671ccce9058ebfd15313/120'
-                                                                  });
-                                                 });
-                </script>
-            <script src="./index_resources/adAdsense.js"></script>
-            <script type="text/javascript"> (function (w) { w.frontjsConfig = {token: 'c68f352d79ca00ed4b38afe12d899f6a', behaviour: 15, origin: ['pgyer.com', 'google-analytics.com', 'bdstatic.com', 'google.com', 'googlesyndication.com', 'baidu.com', 'meiqia.com', 'qiniup.com', 'googletagmanager.com'], exclude: ['meiqia.com', 'baidu.com']} })(window); </script>
-            
-            <script type="text/javascript" src="./index_resources/tracker.min.js" crossorigin="true"></script>
-            
-            <script>
-                $(function() {
-                  var copyrightHeight = document.querySelector('.copyright').offsetHeight;
-                  var offsetTop = $(window).height() - $(".copyright").offset().top
-                  if(offsetTop - copyrightHeight > 0) {
-                  if (!isMobileRequest) {
-                  $(".copyright").css({'position': 'fixed', 'bottom': '0px', 'width': '100%'});
-                  }
-                  }
-                  });
-                  $('.copyright').show();
-                </script>
-            
-            
-            
-</body></html>
+                App.init();
+                
+                $('#reportClick, #feedbackClick').click(function () {
+                    var modal = $(this).attr('data-modal');
+                    ajaxLoadModal(modal);
+                });
+                
+                $('#inhouseClick').click(function () {
+                    $("#inhouseTip").modal('show');
+                });
+                
+                $('#form').submit(function() {
+                    if ($('#password').val() == '') {
+                        alert(appInstallPasswordAlert);
+                        return false;
+                    }
+                    saveData();
+                    return false;
+                });
+
+                initView();
+                
+                $('.history_show_more').click(function() {
+                    loadOtherApps();
+                });
+                
+                if (isWeiXin()) {
+                    setTimeout(function () {
+                        $('.view-alert').slideDown(1000);
+                        }, 500);
+                    }
+                    $("#lastest-li .close-tips").on('click', function() {
+                        $("#lastest-li").removeClass('hide').addClass('hide');
+                        // 使fashion模板背景变小
+                        $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
+                        $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
+                        $("div.view-fashion-body").css('background-size', 'auto 170px');
+                        });
+                    });
+        </script>
+        <script src="./index_resources/adAdsense.js"></script>
+        <script type="text/javascript"> (function (w) { w.frontjsConfig = {token: 'c68f352d79ca00ed4b38afe12d899f6a', behaviour: 15, origin: ['pgyer.com', 'google-analytics.com', 'bdstatic.com', 'google.com', 'googlesyndication.com', 'baidu.com', 'meiqia.com', 'qiniup.com', 'googletagmanager.com'], exclude: ['meiqia.com', 'baidu.com']} })(window); </script>
+        
+        <script type="text/javascript" src="./index_resources/tracker.min.js" crossorigin="true"></script>
+        
+    </body>
+</html>
 
 
