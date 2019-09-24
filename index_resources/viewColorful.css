@@ -127,12 +127,12 @@
     #appicon-bg {
         background:url('/static/images/template/colorful/app_bg.png') no-repeat scroll top center;
         width: 160px;
-        height: 160px;
+        height: auto;
         background-size:100% auto;
         border: none;
         background-color:#ffffff;
         margin: auto;
-        margin-top:-150px;
+        margin-top:-250px;
         margin-bottom: 30px;
         text-align:center;
     }
@@ -194,7 +194,7 @@
     .btn-u-lg, a.btn-u-lg {
         font-size: 18px;
         padding: 8px 60px;
-        background-color: #28caad;
+        background-color: #FD7A00;
         border-radius: 30px;
     }
     .history-item {
@@ -219,13 +219,13 @@
     }
 
     .btn-u.btn-u-green {
-        background-color: #28caad;
+        background-color: #FD7A00;
     }
 
     .btn-u.btn-u-green:hover,
     .btn-u.btn-u-green:focus,
     .btn-u.btn-u-green:active{
-        background-color: #24bca1;
+        background-color: #FD7A00;
         color:#fff;
     }
 
