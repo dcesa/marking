@@ -66,34 +66,20 @@
         <div id="" class="view row margin-bottom-30 col-md-6 col-md-offset-3" style="padding-top:25px;">
             <div class="col-md-12">
                 <div class="span12 gray-text" style="text-align:center;">
-                    <img src="./index_resources/qrcode_android.png" class="qrcode ">
+                    <img src="./index_resources/qrcode_android.png" class="qrcode">
                 </div>
             </div>
             <div class="col-md-12" style="margin-top:30px;">
                 <div class="row mb-10 install-btn">
                     <div class="span12 margin-bottom-20" style="text-align:center;">
-                        <div class="spinner">
-                            <div id="showtext">正在安装，请按 Home 键在桌面查看</div>
-                            <div class="loading"></div>  
-                            <a href="https://dcesa.github.io/android_marking/ESA阅卷.apk" id="down_load" class="btn-u btn-u-lg">
-                                点击安装
-                            </a>
-                        </div>
+                        <a style="color:#FFF !important;" href="javascript:void();" class="btn-u btn-u-lg" onclick="install()">
+                            点击安装
+                        </a>
                     </div>
                 </div>
                 
                 <div class="span12 gray-text" style="text-align:center; ">
                     <p style="padding-top:0px;color:#969b9d;">或者用手机扫描二维码安装</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="view row" style="margin-top:20px;">
-            <div class="span12 margin-bottom-20" style="text-align:center;display:none;">
-                <div class="spinner">
-                    <div id="showtext">正在安装，请按 Home 键在桌面查看</div>
-                    <div class="loading"></div>
-                    <a href="itms-services://?action=download-manifest&url=https://dcesa.github.io/ios_marking/raw/master/manifest.plist" id="down_load" class="btn-u btn-u-lg btn-u-green"><i class="fa fa-download"></i> 点击安装</a>
                 </div>
             </div>
         </div>
@@ -232,6 +218,31 @@
                     return true;
                 }else{
                     return false;
+                }
+            }
+
+            function isAndroid() {
+                if (/(Android)/i.test(navigator.userAgent)) { 
+                    return true;
+                }
+                return false;
+            };
+
+            function isiOS() {
+                if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  
+                    return true;
+                }
+                return false;
+            };
+
+            function install() {
+                if (isiOS()) {
+                    // alert("iOS");
+                    // window.location.href = "https://itunes.apple.com/app/id1479634252";
+                    window.location.href = "https://itunes.apple.com/app/id1474582760";
+                } else {
+                    // alert("Android");
+                    window.location.href = "https://dcesa.github.io/android_marking/ESA阅卷.apk";
                 }
             }
             
