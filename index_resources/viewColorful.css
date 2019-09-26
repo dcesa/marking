@@ -132,8 +132,8 @@
         border: none;
         background-color:#ffffff;
         margin: auto;
-        margin-top:-250px;
-        margin-bottom: 30px;
+        margin-top:-270px;
+        margin-bottom: 15px;
         text-align:center;
     }
     .appicon{
@@ -221,14 +221,6 @@
     .btn-u.btn-u-green {
         background-color: #FD7A00;
     }
-
-    .btn-u.btn-u-green:hover,
-    .btn-u.btn-u-green:focus,
-    .btn-u.btn-u-green:active{
-        background-color: #FD7A00;
-        color:#fff;
-    }
-
     .servive-block-light, .servive-block-default {
         background:none;
     }
