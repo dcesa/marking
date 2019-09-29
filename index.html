@@ -56,9 +56,13 @@
             </div>
             
             <div class="span12 gray-text margin-bottom-30" style="text-align:center;">
-                <ul class="breadcrumb " >
+                <ul class="breadcrumb" id="android-version-block">
                     <li>版本：2.0.0.092401</li>
                     <li>更新时间：2019-09-24</li>
+                </ul>
+                <ul class="breadcrumb" id="ios-version-block">
+                    <li>版本：2.0.0.092701</li>
+                    <li>更新时间：2019-09-27</li>
                 </ul>
             </div>
         </div>
@@ -273,16 +277,24 @@
                 if (isWeiXin()) {
                     setTimeout(function () {
                         $('.view-alert').slideDown(1000);
-                        }, 500);
-                    }
-                    $("#lastest-li .close-tips").on('click', function() {
+                    }, 500);
+                }
+                $("#lastest-li .close-tips").on('click', function() {
                         $("#lastest-li").removeClass('hide').addClass('hide');
                         // 使fashion模板背景变小
                         $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
                         $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
                         $("div.view-fashion-body").css('background-size', 'auto 170px');
-                        });
-                    });
+                });
+
+                if (isiOS()) {
+                    $('#android-version-block').css('display', 'none');
+                    $('#ios-version-block').css('display', 'block');
+                } else {
+                    $('#android-version-block').css('display', 'block');
+                    $('#ios-version-block').css('display', 'none');
+                }
+            });
         </script>
         <script src="./index_resources/adAdsense.js"></script>
         <script type="text/javascript"> (function (w) { w.frontjsConfig = {token: 'c68f352d79ca00ed4b38afe12d899f6a', behaviour: 15, origin: ['pgyer.com', 'google-analytics.com', 'bdstatic.com', 'google.com', 'googlesyndication.com', 'baidu.com', 'meiqia.com', 'qiniup.com', 'googletagmanager.com'], exclude: ['meiqia.com', 'baidu.com']} })(window); </script>
