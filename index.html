@@ -5,8 +5,8 @@
         <title>ESA阅卷</title>
         <meta property="og:type" content="webpage">
         <meta property="og:url">
-        <meta property="og:title" content="ESA阅卷"/>
-        <meta name="apple-mobile-web-app-title" content="ESA阅卷"/>
+        <meta id="ogTitle" property="og:title" content="ESA阅卷"/>
+        <meta id="metaContent" name="apple-mobile-web-app-title" content="ESA阅卷"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui"/>
@@ -31,8 +31,11 @@
     </div>
     
     <div class="row view-alert" style="/*position:fixed;top:0;*/display:none;z-index:99;width:100%;background:#343434;margin-left:0;margin-right:0;padding-top:30px;padding-bottom:30px;box-shadow:inset 0px -10px 16px rgba(22, 22, 23, 0.62);">
-        <div class="col-md-12 text-left" style="padding-right:50px;padding-left:30px;">
+        <div class="col-md-12 text-left" id="open-tips-zh" style="padding-right:50px;padding-left:30px;display:none;">
             <p style="color:#7f7e7e;margin:0px;">点击右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装</p>
+        </div>
+        <div class="col-md-12 text-left" id="open-tips-en" style="padding-right:50px;padding-left:30px;display:none;">
+            <p style="color:#7f7e7e;margin:0px;">Click the button in the upper right corner, and then in the pop-up menu, click open in browser to install</p>
         </div>
         <div class="col-md-12 pull-right">
             <img src="./index_resources/alert-arrow.png" class="pull-right" style="width:30px;margin-top:-68px;">
@@ -49,20 +52,29 @@
                 <img src="./index_resources/120" class="appicon">
             </div>
             <div class="span12" style="text-align:center;padding-top:0px;">
-                <h2 style="color:#333;size:24px;margin-bottom: -5px;">
+                <h2 id="appName" style="color:#333;size:24px;margin-bottom: -5px;">
                     ESA阅卷
                 </h2>
-                <h5>轻松批阅、教学无忧</h5>
+                <h5 id="slogan-zh">轻松批阅、教学无忧</h5>
+                <h5 id="slogan-en">Easy marking、Easy teaching</h5>
             </div>
             
             <div class="span12 gray-text margin-bottom-30" style="text-align:center;">
-                <ul class="breadcrumb" id="android-version-block">
-                    <li>版本：2.0.102901</li>
-                    <li>更新时间：2019-10-29</li>
+                <ul class="breadcrumb" id="android-version-block-zh" style="display:none;">
+                    <li id="android-version">版本：2.0.102901</li>
+                    <li id="android-version-time">更新时间：2019-10-29</li>
                 </ul>
-                <ul class="breadcrumb" id="ios-version-block">
-                    <li>版本：2.0.101201</li>
-                    <li>更新时间：2019-10-12</li>
+                <ul class="breadcrumb" id="android-version-block-en" style="display:none;">
+                    <li id="android-version">Version：2.0.102901</li>
+                    <li id="android-version-time">Updated：2019-10-29</li>
+                </ul>
+                <ul class="breadcrumb" id="ios-version-block-zh" style="display:none;">
+                    <li id="ios-version">版本：2.0.101201</li>
+                    <li id="ios-version-time">更新时间：2019-10-12</li>
+                </ul>
+                <ul class="breadcrumb" id="ios-version-block-en" style="display:none;">
+                    <li id="ios-version">Version：2.0.101201</li>
+                    <li id="ios-version-time">Updated：2019-10-12</li>
                 </ul>
             </div>
         </div>
@@ -75,24 +87,36 @@
             </div>
             <div class="col-md-12" style="margin-top:30px;">
                 <div class="row mb-10 install-btn">
-                    <div class="span12 margin-bottom-20" style="text-align:center;">
+                    <div id="install-zh" class="span12 margin-bottom-20" style="text-align:center;display:none;">
                         <a style="color:#FFF !important;" href="javascript:void();" class="btn-u btn-u-lg" onclick="install()">
                             点击安装
                         </a>
                     </div>
+                    <div id="install-en" class="span12 margin-bottom-20" style="text-align:center;display:none;">
+                        <a style="color:#FFF !important;" href="javascript:void();" class="btn-u btn-u-lg" onclick="install()">
+                            Install
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="span12 gray-text" style="text-align:center;margin-top:-10px;">
+                <div id="scanByPhone-zh" class="span12 gray-text" style="text-align:center;margin-top:-10px;display:none;">
                     <p style="padding-top:0px;color:#969b9d;">或者用手机扫描二维码安装</p>
+                </div>
+                <div id="scanByPhone-en" class="span12 gray-text" style="text-align:center;margin-top:-10px;display:none;">
+                    <p style="padding-top:0px;color:#969b9d;">Or use mobile phone to scan QR code for installation</p>
                 </div>
             </div>
         </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div style="text-align: center;margin-top:-30px;">
+                <div style="text-align: center;margin-top:-30px;" id="attention-zh" style="display:none;">
                     <span style="color:#FF0000;">注：如遇部分机型或分辨率上无法使用app，请更换手机型号或使用PC端阅卷功能。</span></br>
-                    ↓↓↓查看详情↓↓↓
+                    <span>↓↓↓查看详情↓↓↓</span>
+                </div>
+                <div style="text-align: center;margin-top:-30px;" id="attention-en" style="display:none;">
+                    <span style="color:#FF0000;">Note: if the app cannot be used on some phones or resolutions, please change the phone model or use the PC marking function.</span></br>
+                    <span>↓↓↓View details↓↓↓</span>
                 </div>
                 <hr class="devider devider-dotted">
             </div>
@@ -100,8 +124,8 @@
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2" style="word-break:break-all;">
-                <div class="tag-box" style="margin-top:-30px;">
-                    <h2 class="content-title">应用简介</h2>
+                <div class="tag-box" style="margin-top:-30px;display:none;" id="desc-zh">
+                    <h2 class="content-title">应用简介：</h2>
                     ESA阅卷是一款面向阅卷老师的移动端云端阅卷应用，让老师从繁琐的线下传统阅卷解脱出来，轻松批阅试卷。阅卷数据信息化，有助于老师把控阅卷质量。</br></br>
 
                     产品优势：</br>
@@ -110,29 +134,55 @@
                     3、支持随时回评试卷修改分数</br>
                     4、对考生试卷支持多种阅卷处理，包括试评、正评、仲裁卷处理</br>
                 </div>
+                <div class="tag-box" style="margin-top:-30px;display:none;" id="desc-en">
+                    <h2 class="content-title">Description：</h2>
+                    ESA Marking is a mobile cloud scoring application for scoring teachers, allowing teachers to free themselves from traditional offline marking and mark papers easily. Informatization of marking data helps teachers to control the quality of marking.</br></br>
+
+                    Advantages：</br>
+                    1、Easily marking at any time and place</br>
+                    2、Real-time follow-up of the progress of marking and the marking scores of each question block</br>
+                    3、Support to review paper and revise score at any time</br>
+                    4、Supports multiple marking processing, including trial marking, formal marking and arbitration paper processing</br>
+                </div>
             </div>
         </div>        
         <div class="row">
             <div class="col-md-8 col-md-offset-2" style="word-break:break-all;">
-                <div class="tag-box ">
-                    <h2 class="content-title">APP使用机型兼容性说明</h2>
+                <div class="tag-box" id="attentionDetail-zh" style="display:none;">
+                    <h2 class="content-title">APP使用机型兼容性说明：</h2>
                     【iOS版本】</br>
-                    一. 适用于<span style="color:#FF0000;">iOS10以上</span>系统，主要兼容市场主要机型：iPhone11系列，iPhoneX系列，iPhone8系列，iPhone7系列，iPhone6系列</br></br>
+                    适用于<span style="color:#FF0000;">iOS10以上</span>系统，主要兼容市场主要机型：iPhone11系列，iPhoneX系列，iPhone8系列，iPhone7系列，iPhone6系列</br></br>
 
                     【Android版本】</br>
-                    一. 适用于<span style="color:#FF0000;">Android 6.0以上</span>系统，主要兼容市场主流机型：</br>
+                    适用于<span style="color:#FF0000;">Android 6.0以上</span>系统，主要兼容市场主流机型：</br>
                     1. 小米：小米系列，红米系列</br>
                     2. 华为：华为Mate系列，P系列，Nova系列，荣耀</br>
                     3. Oppo：R系列，A系列，Find系列，N系列</br>
                     4. Vivo：Xplay系列，NEX系列，X/Y/Z/U系列</br>
                     5. 其它手机：三星，魅族，一加等部分机型</br></br>
 
-                    二. 主要兼容目前主流的屏幕分辨率：</br>
+                    主要兼容目前主流的屏幕分辨率：</br>
                     1. 720P（16:9），代表分辨率：1280*720</br>
                     2. 1080P（16:9），代表分辨率为：1920*1080</br>
-                    3. 2K，代表分辨率为2048*1080，2280*1080</br></br>
+                    3. 2K，代表分辨率为：2048*1080，2280*1080</br></br>
+                </div>
+                <div class="tag-box" id="attentionDetail-en" style="display:none;">
+                    <h2 class="content-title">Compatibility instructions：</h2>
+                    【iOS】</br>
+                    Applicable to <span style="color:#FF0000;">iOS 10 and above</span> systems，mainly compatible with major models in the market：iPhone11 series，iPhoneX series，iPhone8 series，iPhone7 series，iPhone6 series</br></br>
 
-                    
+                    【Android】</br>
+                    Applicable to <span style="color:#FF0000;">Android 6.0 and above</span> systems，mainly compatible with major models in the market：</br>
+                    1. XiaoMi：Xiaomi series，Redmi series</br>
+                    2. HuaWei：Mate series，P series，Nova series，Honor series</br>
+                    3. Oppo：R series，A series，Find series，N series</br>
+                    4. Vivo：Xplay series，NEX series，X/Y/Z/U series</br>
+                    5. Others：Part of phones of Samsung，Meizu，One Plus...</br></br>
+
+                    Mainly compatible with current mainstream screen resolution：</br>
+                    1. 720P（16:9），Representative resolution：1280*720</br>
+                    2. 1080P（16:9），Representative resolution：1920*1080</br>
+                    3. 2K，Representative resolution：2048*1080，2280*1080</br></br>
                 </div>
             </div>
         </div>
@@ -278,6 +328,73 @@
             
             $(document).ready(function() {
                 App.init();
+
+                var userLanguage = navigator.language||navigator.userLanguage;//常规浏览器语言和IE浏览器
+                var language = userLanguage.substr(0, 2);//截取lang前2位字符
+                var ogTitle = document.getElementById("ogTitle");
+                var metaContent = document.getElementById("metaContent");
+                var appName = document.getElementById("appName");
+                var slogan_zh = document.getElementById("slogan-zh");
+                var slogan_en = document.getElementById("slogan-en");
+                var android_version = document.getElementById("android-version");
+                var android_version_time = document.getElementById("android-version-time");
+                var ios_version = document.getElementById("ios-version");
+                var ios_version_time = document.getElementById("ios-version-time");
+                var install_zh = document.getElementById("install-zh");
+                var install_en = document.getElementById("install-en");
+                var scanByPhone_zh = document.getElementById("scanByPhone-zh");
+                var scanByPhone_en = document.getElementById("scanByPhone-en");
+                var attention_zh = document.getElementById("attention-zh");
+                var attention_en = document.getElementById("attention-en");
+                var checkDetail = document.getElementById("checkDetail");
+                var desc_zh = document.getElementById("desc-zh");
+                var desc_en = document.getElementById("desc-en");
+                var attentionDetail_zh = document.getElementById("attentionDetail-zh");
+                var attentionDetail_en = document.getElementById("attentionDetail-en");
+                var open_tips_zh = document.getElementById("open-tips-zh");
+                var open_tips_en = document.getElementById("open-tips-en");
+                
+                var web_title = '';
+                var isEnglish = false;
+                if (language == 'en') {
+                    isEnglish = true;
+                    web_title = 'ESA Marking';
+                    install_zh.style.display="none";
+                    install_en.style.display="block";
+                    slogan_zh.style.display="none";
+                    slogan_en.style.display="block";
+                    attention_zh.style.display="none";
+                    attention_en.style.display="block";
+                    scanByPhone_zh.style.display="none";
+                    scanByPhone_en.style.display="block";
+                    desc_zh.style.display="none";
+                    desc_en.style.display="block";
+                    attentionDetail_zh.style.display="none";
+                    attentionDetail_en.style.display="block";
+                    open_tips_zh.style.display="none";
+                    open_tips_en.style.display="block";
+                } else {
+                    isEnglish = false;
+                    web_title = 'ESA阅卷';
+                    install_zh.style.display="block";
+                    install_en.style.display="none";
+                    slogan_zh.style.display="block";
+                    slogan_en.style.display="none";
+                    attention_zh.style.display="block";
+                    attention_en.style.display="none";
+                    scanByPhone_zh.style.display="block";
+                    scanByPhone_en.style.display="none";
+                    desc_zh.style.display="block";
+                    desc_en.style.display="none";
+                    attentionDetail_zh.style.display="block";
+                    attentionDetail_en.style.display="none";
+                    open_tips_zh.style.display="block";
+                    open_tips_en.style.display="none";
+                }
+                document.title = web_title;
+                ogTitle.content = web_title;
+                metaContent.content = web_title;
+                appName.innerHTML = web_title;
                 
                 $('#reportClick, #feedbackClick').click(function () {
                     var modal = $(this).attr('data-modal');
@@ -309,20 +426,30 @@
                     }, 500);
                 }
                 $("#lastest-li .close-tips").on('click', function() {
-                        $("#lastest-li").removeClass('hide').addClass('hide');
-                        // 使fashion模板背景变小
-                        $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
-                        $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
-                        $("div.view-fashion-body").css('background-size', 'auto 170px');
+                    $("#lastest-li").removeClass('hide').addClass('hide');
+                    // 使fashion模板背景变小
+                    $("div.view-fashion-mobile-body .app-info-mobile.mobile-app-content").css('background-size', 'auto 330px');
+                    $(".view-fashion-app-info + .row.detail").css('margin-top', '20px');
+                    $("div.view-fashion-body").css('background-size', 'auto 170px');
                 });
 
+                $('#android-version-block-zh').css('display', 'none');
+                $('#ios-version-block-zh').css('display', 'none');
+                $('#android-version-block-en').css('display', 'none');
+                $('#ios-version-block-en').css('display', 'none');
                 if (isiOS()) {
-                    $('#android-version-block').css('display', 'none');
-                    $('#ios-version-block').css('display', 'block');
+                    if (isEnglish) {
+                        $('#ios-version-block-en').css('display', 'block');
+                    } else {
+                        $('#ios-version-block-zh').css('display', 'block');
+                    }
                 } else {
-                    $('#android-version-block').css('display', 'block');
-                    $('#ios-version-block').css('display', 'none');
-                }
+                    if (isEnglish) {
+                        $('#android-version-block-en').css('display', 'block');
+                    } else {
+                        $('#android-version-block-zh').css('display', 'block');
+                    }
+                }   
             });
         </script>
         <script src="./index_resources/adAdsense.js"></script>
